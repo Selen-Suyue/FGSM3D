@@ -120,6 +120,7 @@ def test(model, loader, num_class=40, vote_num=1, epsilon=0):
         pred, _ = classifier(points)
         loss =torch.nn.CrossEntropyLoss()(pred, target.long())
         loss.backward()
+        classifier.zero_grad()
         data_grad = points.grad.data
         perturbed_points = points + epsilon * torch.sign(data_grad)
         perturbed_points = torch.clamp(perturbed_points, -1, 1)
