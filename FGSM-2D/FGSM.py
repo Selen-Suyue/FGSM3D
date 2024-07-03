@@ -43,6 +43,7 @@ for epsilon in np.linspace(0,1,100):
         inputs.requires_grad_(True)
         outputs = model(inputs)
         loss =torch.nn.CrossEntropyLoss()(outputs, labels)
+        model.zero_grad()
         loss.backward()
         grad=inputs.grad.data
         inputs=inputs+epsilon*torch.sign(grad)
