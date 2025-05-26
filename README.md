@@ -1,1 +1,1 @@
-This is my homework for the 2024 professional basic practice of Xidian University. We designed FGSM adversarial perturbations for point clouds to obtain better attack effects. Specifically, we attacked the Pointnet++ architecture.
+We designed FGSM adversarial perturbations for point clouds to obtain better attack effects. Specifically, we attacked the Pointnet++ architecture.
